@@ -5,7 +5,7 @@ simple attract-mode flat theme
 
 ![screenshot](/screenshot.png)
 
-###Sounds
+### Sounds
 
 must be copied to .attract/sounds
 

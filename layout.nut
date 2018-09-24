@@ -80,7 +80,7 @@ function set_system_menu_style( object ) {
 }
 
 function set_counter_style( object ) {
-	object.set_rgb( 105, 105, 105 );
+	object.set_rgb( 31, 31, 31 );
 	object.align = Align.Right;
 	object.font="Roboto-Light";
 }
@@ -119,24 +119,21 @@ try {
 } catch ( e ) {}
 
 
-// bottom background
-
-fe.add_image( "images/bg.png", 0, 0, fe.layout.width, fe.layout.height );
-
 // Initialize the video frame
 
-local snap = FadeDelayedVideo("snap", 480, -125, 800, 600);
+local snap = FadeDelayedVideo("snap", 480, -85, 800, 600);
 snap.video_playing = false;
 snap.video_flags = Vid.NoAutoStart;
 snap.trigger = Transition.EndNavigation;
 snap.start_delay = 2000;
 
-// mask for snap
-fe.add_image( "images/mask.png",	430, 0, 850, 500 );
+// bottom background
+
+fe.add_image( "images/bg.png", 0, 0, fe.layout.width, fe.layout.height );
 
 // Initialize misc text
 
-local l = fe.add_text( "[ListEntry]/[ListSize]", 1075, 870, 200, 20 );
+local l = fe.add_text( "[ListEntry]/[ListSize]", 1070, 870, 200, 20 );
 set_counter_style(l);
 
 //
@@ -254,9 +251,9 @@ set_help_text_style(l);
 l = fe.add_text("PLAY GAME", 1000, 925, 1200, 20);
 set_help_text_style(l);
 
-l = fe.add_text("EXIT",	797, 928, 30, 14);
+l = fe.add_text("EXIT",	796, 928, 30, 14);
 set_icon_text_style(l);
-l = fe.add_text("START", 965, 928, 500, 13);
+l = fe.add_text("START", 965, 929, 500, 13);
 set_icon_text_style(l);
 
 // clock
